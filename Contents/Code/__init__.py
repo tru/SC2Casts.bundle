@@ -154,7 +154,7 @@ def GameInfo(game):
                 oc.add(VideoClipObject(
                     url = YOUTUBE_VIDEO_PAGE % part,
                     title = title,
-                    summary = summry,
+                    summary = summary,
                     rating = rating,
                     thumb = Callback(GetThumb, id = part)))
 
