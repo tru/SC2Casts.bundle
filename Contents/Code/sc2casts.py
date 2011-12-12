@@ -97,8 +97,7 @@ def fillFromNode(cast, node):
         partlist = []
         for p in game.xpath('.//part'):
             partlist.append(p.text)
-            cast.games.append(partlist)
-
+        cast.games.append(partlist)
 
 
 class SC2Cast:
