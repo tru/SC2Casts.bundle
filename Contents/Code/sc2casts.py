@@ -31,7 +31,7 @@ RACES = {
     3:'Z'
 }
 
-BASE_URL = 'http://sc2casts.com/iphone19/'
+BASE_URL = 'http://sc2casts.com/services/plex/'
 
 CACHE_TIME_LONG    = 60*60*24*30 # Thirty days
 CACHE_TIME_SHORT   = 60*10    # 10  minutes
