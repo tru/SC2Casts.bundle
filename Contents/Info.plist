@@ -16,19 +16,13 @@
 	<string>hook</string>
 	<key>CFBundleVersion</key>
 	<string>1.0</string>
-	<key>PlexClientPlatforms</key>
-	<string>MacOSX,iOS,Android,LGTV</string>
-	<key>PlexPluginMode</key>
-	<string>AlwaysOn</string>
-    <key>PlexFrameworkVersion</key>
-    <string>2</string>
+	<key>PlexFrameworkVersion</key>
+	<string>2</string>
 	<key>PlexAudioCodec</key>
 	<array>
 		<string>AAC</string>
 		<string>MP3</string>
 	</array>
-	<key>PlexFrameworkVersion</key>
-	<string>2</string>
 	<key>PlexMediaContainer</key>
 	<array>
 		<string>MP4</string>
