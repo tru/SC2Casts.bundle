@@ -139,7 +139,7 @@ def GameInfo(game):
     oc = ObjectContainer(view_group = 'InfoList', title2 = '%s vs %s (%s)' % (game.players[0], game.players[1], game.bestof))
 
     gamenr = 1
-    rating = 0
+    rating = 0.0
     if game.rateup:
         rating = (float(game.rateup) * 10.0) / (float(game.rateup) + float(game.ratedown))
 
