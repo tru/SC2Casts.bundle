@@ -140,12 +140,12 @@ def GameInfo(game):
 
     gamenr = 1
     rating = 0.0
+    summary = "Casted by: %s\nAt %s, %s" % (game.caster, game.event, game.round)
+
     if game.rateup:
         rating = (float(game.rateup) * 10.0) / (float(game.rateup) + float(game.ratedown))
-
     
     for p in game.games:
-        summary = "Casted by: %s\nAt %s, %s" % (game.caster, game.event, game.round)
         
         if len(p) > 1:
             partnr = 1
@@ -169,6 +169,18 @@ def GameInfo(game):
 
         gamenr+=1
     
+
+    Log("%d < %d" % (gamenr, game.bestofnum+1))
+    if (gamenr < game.bestofnum+1):
+        for i in range(gamenr, game.bestofnum+1):
+             oc.add(VideoClipObject(
+                url = YOUTUBE_VIDEO_PAGE % "dQw4w9WgXcQ",
+                title = "Game %d" % i,
+                summary = summary,
+                rating = rating,
+                thumb = Callback(GetThumb, id = game.games[0][0])))
+
+
     return oc
 
 ###################################################################################################
