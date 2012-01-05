@@ -128,7 +128,7 @@ def SeriesList(title, listOfGames):
     for game in listOfGames:
         title = "%s vs %s (%s)" % (game.players[0], game.players[1], game.bestof)
         summary = "Casted by: %s\nAt %s, %s" % (game.caster, game.event, game.round)
-        oc.add(DirectoryObject(key = Callback(GameInfo, game = game), title = title, summary = summary, thumb = R('%s.png' % game.matchup())))
+        oc.add(DirectoryObject(key = Callback(GameInfo, game = game), title = title, summary = summary, tagline = summary, thumb = R('%s.png' % game.matchup())))
     
     return oc
 
@@ -156,6 +156,7 @@ def GameInfo(game):
                     title = title,
                     summary = summary,
                     rating = rating,
+                    originally_available_at = game.date_added,
                     thumb = Callback(GetThumb, id = part)))
 
                 partnr+=1
@@ -165,6 +166,7 @@ def GameInfo(game):
                 title = "Game %d" % gamenr,
                 summary = summary,
                 rating = rating,
+                originally_available_at = game.date_added,
                 thumb = Callback(GetThumb, id = p[0])))
 
         gamenr+=1
@@ -178,6 +180,7 @@ def GameInfo(game):
                 title = "Game %d" % i,
                 summary = summary,
                 rating = rating,
+                originally_available_at = game.date_added,
                 thumb = Callback(GetThumb, id = game.games[0][0])))
 
 
